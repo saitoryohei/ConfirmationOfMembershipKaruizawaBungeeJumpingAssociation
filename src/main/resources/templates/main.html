@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>軽井沢バンジージャンプ協会入会登録</title>
+    <style>
+        body { font-family: sans-serif; margin: 50px; }
+        .form-item { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <h2>軽井沢バンジージャンプ協会入会登録</h2>
+    <form th:action="@{/confirm}" method="post">
+        <div class="form-item">
+            名前：<input type="text" name="userName" required />
+        </div>
+        <div class="form-item">
+            年齢：<input type="number" name="userLevel" value="1" min="1" max="99" />
+        </div>
+        <button type="submit">登録する</button>
+    </form>
+</body>
+</html>

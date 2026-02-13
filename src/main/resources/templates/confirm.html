@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登録完了</title>
+</head>
+<div>
+    <h2>軽井沢バンジージャンプ協会入会の確認</h2>
+    
+    <p th:text="|ようこそ、${rank}の ${name} さん！|"></p>
+    
+    <p>年齢：[[${level}]]</p>
+
+    <div th:if="${level >= 50}">
+        <p style="color: gold;">★ ロープ無しプラン対象者です★</p>
+    </div>
+	
+	<div th:unless="${level >=50}"
+    
+		<p style = "color:blue;">朝食あり</p>
+		
+	</div>
+    <hr>
+    <a th:href="@{/main}">入力画面に戻る</a>
+</body>
+</html>
